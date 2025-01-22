@@ -1,0 +1,36 @@
+html {
+  font-size: 54px;
+}
+
+@media (min-width: 100px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 5px;
+}
+table{
+    width: 100%;
+    text-align:center;
+}
+footer {
+    text-align: center;
+    font-size: 15px;
+}
+
+p {
+	white-space: pre-wrap;
+}
+
+#createButton {
+    display: block; /* Ensure it takes up a full row */
+    margin: 5% auto; /* Add space above and center horizontally */
+    width: 20%;
+}

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<NotesApp.Models.Note>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.PreviewText</td>
+                <td>
+                    <a href="@Url.Action("ViewNote", new { id = item.Id })" class="btn btn-primary">View</a>
+                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-outline-secondary">Edit</a>
+                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-outline-secondary">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create")" class="btn btn-outline-primary" id="createButton">Create</a>
